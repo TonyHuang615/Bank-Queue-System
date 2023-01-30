@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>Bank Counter</title>
+  </head>
+  <body>
+    <font color="#008000",face="arial",size="3">
+    <h3 align = "center">Business Bank Counter 1</h3>
+    </font>
+    <font size="3">
+    <p align = "center">Current serving number:  <span id="q-number"></span></p>
+    </font>
+    <div style="text-align:center">
+    <button id="next-button" onclick="next()">Next</button>
+    <button id="skip-button">Skip</button>
+    <button id="stop-button">Stop</button>
+    </div>
+    <script>
+        let qNumber = 0;
+        function next() {
+          qNumber++;
+          document.getElementById('q-number').innerHTML = qNumber;
+        }
+      </script>
+  </body>
+</html>

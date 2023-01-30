@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <font color = "Black">
+        <h1 align = "center">
+            Queuing Numbering System
+        </h1>
+    </font>
+    <p>Welcome to our queuing numbering system. Please follow the steps below to get your q number:</p>
+    <ol>
+    <li>Enter your personal information:
+        <ul>
+            <li>Type of business: 
+                <select id="businessType">
+                    <option value="normal">Personal</option>
+                    <option value="business">Business</option>
+                    <option value="private_bank">Private Bank</option>
+                </select>
+            </li>
+            <li>Age: <input type="text" id="age"></li>
+            <li>Phone number: <input type="text" id="phone"></li>
+            <li>Email address: <input type="text" id="email"></li>
+        </ul>
+    </li>
+    <li>Click the "Get Q Number" button to receive your q number.</li>
+    </ol>
+        <button onclick="getQNumber()">Get Q Number</button>
+        <font color = "Black">
+            <h1 align = "center">Your Q Number: <span id="q-number"></span></h1>
+            <h1 align = "center">Number of people in queue: <span id="queue-length"></span></h1>
+        </font>
+        <font color = "Red">
+            <h1 align = "center"><span id="queue-stopped"></span></h1>
+        </font>
+    <script>
+        let qNumber = 0;
+        let queueLength = 0;
+        function getQNumber() {
+            qNumber = Math.floor(Math.random() * 1000) + 1;
+            queueLength++;
+            document.getElementById('q-number').innerHTML = qNumber;
+            document.getElementById('queue-length').innerHTML = queueLength;
+        }
+  </script>
+</body>
+</html>
